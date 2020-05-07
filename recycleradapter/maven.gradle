@@ -1,0 +1,44 @@
+apply plugin: 'maven'
+
+ext {
+    PROJ_NAME = "trecycleradapter"
+    PROJ_ARTIFACTID = "trecycleradapter"
+    LOCAL_REPO_URL = "file:/Users/chenxiandiao/teletraan/maven"
+    PROJ_GROUP = "com.teletraan.android"
+    PROJ_VERSION = "1.0.0"
+    PROJ_WEBSITEURL = "common lib"
+    PROJ_ISSUETRACKERURL = "issue address"
+    PROJ_DESCRIPTION = "description"
+    PROJ_LICENCE_NAME = "The Apache Software License, Version 2.0"
+    PROJ_LICENCE_URL = "http://www.apache.org/licenses/LICENSE-2.0.txt"
+    PROJ_LICENCE_DEST = "repo"
+    DEVELOPER_ID = "cxd"
+    DEVELOPER_NAME = "cxd"
+    DEVELOPER_EMAIL = "xd.chen@teletraan.io"
+}
+
+
+uploadArchives {
+    repositories.mavenDeployer {
+        //这里就是最后输出地址，在自己电脑上新建个文件夹，把文件夹路径粘贴在此
+        //注意”file://“ + 路径，有三个斜杠，别漏了
+        repository(url: LOCAL_REPO_URL)
+
+        pom.project {
+            groupId PROJ_GROUP
+            artifactId PROJ_ARTIFACTID
+            version PROJ_VERSION
+        }
+    }
+}
+
+//以下代码会生成jar包源文件，如果是不开源码，请不要输入这段
+//aar包内包含注释
+task androidSourcesJar(type: Jar) {
+    classifier = 'sources'
+    from android.sourceSets.main.java.sourceFiles
+}
+
+artifacts {
+    archives androidSourcesJar
+}
