@@ -1,24 +1,28 @@
-package com.zyxkt.recyclerview_test;
+
+package com.zyxkt.recyclerview.activity;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
-import com.zyxkt.R;
-import com.zyxkt.contract.DataContract;
+import com.zyxkt.recyclerview.R;
+import com.zyxkt.recyclerview.contract.DataContract;
+import com.zyxkt.recyclerview.helper.IRecyclerView;
+import com.zyxkt.recyclerview.helper.RecyclerViewHelper;
+import com.zyxkt.recyclerview.helper.SwipeRefreshHelper;
 
 import java.util.List;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView  ;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 public abstract class BaseRecyclerActivity<T> extends AppCompatActivity
-        implements IRecyclerView<T>, SwipeRefreshHelper.SwipeRefreshListener
-        , DataContract.LoadingView {
+        implements IRecyclerView<T>, SwipeRefreshHelper.SwipeRefreshListener, DataContract.LoadingView {
 
     private TextView tvState;
     private RecyclerViewHelper recyclerViewHelper;
@@ -37,8 +41,16 @@ public abstract class BaseRecyclerActivity<T> extends AppCompatActivity
 
     @Override
     public SwipeRefreshLayout createSwipeRefresh() {
-        return findViewById(R.id.swipe_refresh_layout);
+        SwipeRefreshLayout refreshLayout =  findViewById(R.id.swipe_refresh_layout);
+        refreshLayout.setEnabled(enableRefresh());
+        return refreshLayout;
     }
+
+    @Override
+    public boolean enableRefresh() {
+        return true;
+    }
+
 
     @Override
     public int[] colorRes() {
@@ -91,3 +103,4 @@ public abstract class BaseRecyclerActivity<T> extends AppCompatActivity
         return 50;
     }
 }
+

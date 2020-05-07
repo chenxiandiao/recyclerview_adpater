@@ -1,7 +1,6 @@
 package com.zyxkt.recyclerview_test;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+
 import android.widget.TextView;
 
 import com.zyxkt.R;
@@ -10,6 +9,9 @@ import com.zyxkt.recyclerview.BaseMultiRecyclerAdapter;
 import com.zyxkt.recyclerview.BaseViewHolder;
 
 import java.util.List;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 public class MultiAdapter extends BaseMultiRecyclerAdapter<MultiItem> {
 

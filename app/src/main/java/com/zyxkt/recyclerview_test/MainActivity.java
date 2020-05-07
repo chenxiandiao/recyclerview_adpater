@@ -1,15 +1,18 @@
 package com.zyxkt.recyclerview_test;
 
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
 import android.util.Log;
 
 import com.zyxkt.R;
 import com.zyxkt.model.MultiItem;
 import com.zyxkt.recyclerview.BaseRecyclerAdapter;
+import com.zyxkt.recyclerview.activity.BaseRecyclerActivity;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  *  多布局测试

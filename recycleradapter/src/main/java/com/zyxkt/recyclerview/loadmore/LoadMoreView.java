@@ -1,9 +1,11 @@
 package com.zyxkt.recyclerview.loadmore;
 
-import android.support.annotation.IdRes;
-import android.support.annotation.LayoutRes;
+
 
 import com.zyxkt.recyclerview.BaseViewHolder;
+
+import androidx.annotation.IdRes;
+import androidx.annotation.LayoutRes;
 
 /**
  * Created by BlingBling on 2016/11/11.

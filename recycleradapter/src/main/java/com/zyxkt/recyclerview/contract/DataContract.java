@@ -1,4 +1,4 @@
-package com.zyxkt.contract;
+package com.zyxkt.recyclerview.contract;
 
 import java.util.List;
 

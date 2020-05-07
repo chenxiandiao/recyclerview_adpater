@@ -1,17 +1,20 @@
 package com.zyxkt.recyclerview_test;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+
 import android.view.View;
 import android.widget.Button;
 
 import com.zyxkt.BasicAdapter;
 import com.zyxkt.R;
-import com.zyxkt.contract.DataContract;
 import com.zyxkt.presenter.MainPresenter;
 import com.zyxkt.recyclerview.BaseRecyclerAdapter;
+import com.zyxkt.recyclerview.activity.BaseRecyclerActivity;
+import com.zyxkt.recyclerview.contract.DataContract;
 
 import java.util.List;
+
+import androidx.annotation.Nullable;
 
 public class MainTwoActivity extends BaseRecyclerActivity<String> implements DataContract.LoadDataView<String> {
 
@@ -68,4 +71,8 @@ public class MainTwoActivity extends BaseRecyclerActivity<String> implements Dat
         notifyAdapterDataSetChanged(data, position);
     }
 
+    @Override
+    public boolean enableRefresh() {
+        return false;
+    }
 }

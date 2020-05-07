@@ -1,11 +1,13 @@
-package com.zyxkt.recyclerview_test;
+package com.zyxkt.recyclerview.helper;
 
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.RecyclerView;
+
 
 import com.zyxkt.recyclerview.BaseRecyclerAdapter;
 
 import java.util.List;
+
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 public class RecyclerViewHelper<T> {
 

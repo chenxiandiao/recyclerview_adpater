@@ -1,6 +1,6 @@
 package com.zyxkt.presenter;
 
-import com.zyxkt.contract.DataContract;
+import com.zyxkt.recyclerview.contract.DataContract;
 
 import java.util.ArrayList;
 import java.util.List;

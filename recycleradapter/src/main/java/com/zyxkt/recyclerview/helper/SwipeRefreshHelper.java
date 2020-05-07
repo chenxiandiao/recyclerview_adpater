@@ -1,8 +1,9 @@
-package com.zyxkt.recyclerview_test;
+package com.zyxkt.recyclerview.helper;
 
-import android.support.annotation.ColorRes;
-import android.support.annotation.Nullable;
-import android.support.v4.widget.SwipeRefreshLayout;
+
+import androidx.annotation.ColorRes;
+import androidx.annotation.Nullable;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 /**
  * 下拉刷新的帮助类

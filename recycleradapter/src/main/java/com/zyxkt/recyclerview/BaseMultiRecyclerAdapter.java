@@ -1,9 +1,11 @@
 package com.zyxkt.recyclerview;
 
-import android.support.annotation.LayoutRes;
+
 import android.util.SparseIntArray;
 
 import java.util.List;
+
+import androidx.annotation.LayoutRes;
 
 public abstract class BaseMultiRecyclerAdapter<T extends MultiItemEntity> extends BaseRecyclerAdapter<T> {
 
