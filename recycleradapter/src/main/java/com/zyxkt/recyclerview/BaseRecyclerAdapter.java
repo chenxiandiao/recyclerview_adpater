@@ -99,7 +99,7 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<BaseVi
 
 
     private boolean mFirstOnlyEnable = true;
-    private boolean mOpenAnimationEnable = true;
+    private boolean mOpenAnimationEnable = false;
     private Interpolator mInterpolator = new LinearInterpolator();
     private int mDuration = 300;
     private int mLastPosition = -1;
