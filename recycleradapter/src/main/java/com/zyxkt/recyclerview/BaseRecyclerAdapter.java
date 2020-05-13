@@ -617,6 +617,21 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<BaseVi
     private OnItemClickListener mOnItemClickListener;
     private OnItemLongClickListener mOnItemLongClickListener;
 
+    public void setOnItemClickListener(@Nullable OnItemClickListener listener) {
+        mOnItemClickListener = listener;
+    }
+
+
+    /**
+     * Register a callback to be invoked when an item in this RecyclerView has
+     * been long clicked and held
+     *
+     * @param listener The callback that will run
+     */
+    public void setOnItemLongClickListener(@Nullable OnItemLongClickListener listener) {
+        mOnItemLongClickListener = listener;
+    }
+
     /**
      * Interface definition for a callback to be invoked when an item in this
      * RecyclerView itemView has been clicked.
